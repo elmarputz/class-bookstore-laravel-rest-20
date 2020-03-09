@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "72353fe1-5665-4407-a5ca-20d4ce2405bd",
+		"name": "Bookshop API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Books",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://bookstore20.putz.kwmhgb.at/api/books",
+					"protocol": "http",
+					"host": [
+						"bookstore20",
+						"putz",
+						"kwmhgb",
+						"at"
+					],
+					"path": [
+						"api",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book By ISBN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://bookstore20.putz.kwmhgb.at/api/book/23423234234",
+					"protocol": "http",
+					"host": [
+						"bookstore20",
+						"putz",
+						"kwmhgb",
+						"at"
+					],
+					"path": [
+						"api",
+						"book",
+						"23423234234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check ISBN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://bookstore20.putz.kwmhgb.at/api/book/checkisbn/23423234234",
+					"protocol": "http",
+					"host": [
+						"bookstore20",
+						"putz",
+						"kwmhgb",
+						"at"
+					],
+					"path": [
+						"api",
+						"book",
+						"checkisbn",
+						"23423234234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Book by Search Term",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://bookstore20.putz.kwmhgb.at/api/book/search/huber",
+					"protocol": "http",
+					"host": [
+						"bookstore20",
+						"putz",
+						"kwmhgb",
+						"at"
+					],
+					"path": [
+						"api",
+						"book",
+						"search",
+						"huber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\": \"3453532352345235\",\n    \"title\": \"Erstes neues Buch\",\n    \"user_id\": 1,\n    \"rating\": 3,\n    \"authors\": [\n        {\n            \"id\": 3,\n            \"firstName\": \"Karl\",\n            \"lastName\": \"Huber\"\n        },\n        {\n            \"id\": 4,\n            \"firstName\": \"Johannes\",\n            \"lastName\": \"Schönböck\"\n        }\n    ],\n    \"published\": \"2018-01-01T23:00:00.000Z\",\n    \"subtitle\": \"Wir lernen dann Angular\",\n    \"images\": [\n        {\n            \"url\": \"https://images-na.ssl-images-amazon.com/images/I/51H--PJcVNL._SX342_BO1,204,203,200_.jpg\",\n            \"title\": \"Angular 4\"\n        },\n        {\n            \"url\": \"https://images-na.ssl-images-amazon.com/images/I/514Q%2BCZgjjL._SY400_.jpg\",\n            \"title\": \"Angular\"\n        }\n    ],\n    \"description\": \"Lorem ipsum dolor sit amet\"\n}"
+				},
+				"url": {
+					"raw": "http://bookstore20.putz.kwmhgb.at/api/book",
+					"protocol": "http",
+					"host": [
+						"bookstore20",
+						"putz",
+						"kwmhgb",
+						"at"
+					],
+					"path": [
+						"api",
+						"book"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
