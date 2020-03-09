@@ -20,6 +20,12 @@ class BooksTableSeeder extends Seeder
         $book->description = 'Letzter Teil';
         $book->published = new DateTime();
 
+        $user = App\User::all()->first();
+        $book->user()->associate($user);
+        $book->save();
+
+        $authors = App\Author::all()->pluck('id');
+        $book->authors()->sync($authors);
         $book->save();
 
         // add images to book
