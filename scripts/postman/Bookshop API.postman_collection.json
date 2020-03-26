@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "72353fe1-5665-4407-a5ca-20d4ce2405bd",
-		"name": "Bookshop API",
+		"_postman_id": "951d04a1-86cc-4758-a0b5-7024edf06f19",
+		"name": "Laravel Bookstore (KWM) 2020",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
