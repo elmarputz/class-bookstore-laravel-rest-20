@@ -90,6 +90,21 @@ class BookController extends Controller
         }
     }
 
+
+    public function delete (string $isbn) {
+
+        $book = Book::where('isbn', $isbn)->first();
+        if ($book != null) {
+            $book->delete();
+        }
+        else {
+            throw new \Exception("book couldn't be deleted - does not exist");
+        }
+        return response()->json('book (' .$isbn .' successfully deleted', 200);
+    }
+
+
+
     private function parseRequest (Request $request) : Request {
 
         $date = new \DateTime($request->published);
